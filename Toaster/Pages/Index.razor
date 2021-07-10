@@ -1,0 +1,20 @@
+﻿@page "/"
+
+@inject ToastService ToastService
+
+<h1>Hello, world!</h1>
+
+Welcome to your new app.
+
+<div>
+    <button class="btn btn-danger" @onclick="ToastInfoClick">
+        <span><i class="bi-alarm" /> Toast popup</span>
+    </button>
+</div>
+
+@code {
+    void ToastInfoClick()
+    {
+        ToastService.ShowToast("This is a toast message");
+    }
+}

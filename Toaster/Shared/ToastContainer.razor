@@ -1,6 +1,6 @@
 ﻿@if (toasts.Any())
 {
-    <div class="custom-toast-container">
+    <div class="custom-toast-container @position">
         <CascadingValue Value="this">
             @foreach (var toast in toasts)
             {

@@ -3,6 +3,25 @@
     flex-direction: column;
     position: fixed;
     z-index: 100;
+}
+
+.custom-toast-container-top {
     top: 2rem;
+}
+
+.custom-toast-container-bottom {
+    bottom: 2rem;
+    flex-direction: column-reverse;
+}
+
+.custom-toast-container-left {
+    left: 2rem;
+}
+
+.custom-toast-container-center {
     left: 25vw;
+}
+
+.custom-toast-container-right {
+    right: 2rem;
 }

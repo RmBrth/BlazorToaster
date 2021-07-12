@@ -1,5 +1,4 @@
-﻿
-.custom-toast {
+﻿.custom-toast {
     display: flex;
     position: relative;
     flex-direction: row;
@@ -8,14 +7,42 @@
     padding: 1rem 1.25rem;
     color: #fff;
     width: 50vw;
-    border-radius:1rem;
+    border-radius: 1rem;
     box-shadow: rgba(0,0,0,0.25) 0px 10px 40px;
 }
+
+.toast-icon-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 1rem;
+    font-size: 2.5rem;
+}
+
+.toast-body-container {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    padding-left: 1rem;
+}
+
+    .toast-body-container p {
+        margin-bottom: 0;
+    }
+
+.toast-action-container {
+    font-size: 1.5rem;
+}
+
+    .toast-action-container i {
+        cursor: pointer;
+    }
 
 @keyframes fadein {
     from {
         opacity: 0;
     }
+
     to {
         opacity: 1;
     }
@@ -25,6 +52,7 @@
     from {
         opacity: 1;
     }
+
     to {
         opacity: 0;
     }

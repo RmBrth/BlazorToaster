@@ -4,11 +4,11 @@ namespace Toaster.Services
 {
     public class ToastService
     {
-        public event Action<string> OnShow;
+        public event Action<string, ToastLevel> OnShow;
 
-        public void ShowToast(string message)
+        public void ShowToast(string message, ToastLevel level)
         {
-            OnShow?.Invoke(message);
+            OnShow?.Invoke(message, level);
         }
     }
 }

@@ -10,6 +10,8 @@
                     builder.OpenComponent(0, toast.GetType());
                     builder.AddAttribute(1, "Id", toast.Id);
                     builder.AddAttribute(2, "Message", toast.Message);
+                    builder.AddAttribute(3, "Level", toast.Level);
+                    builder.SetKey(toast);
                     builder.CloseComponent();
                 };
                 @renderFragment

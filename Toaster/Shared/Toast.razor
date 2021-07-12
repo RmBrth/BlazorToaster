@@ -1,9 +1,9 @@
-﻿<div class="custom-toast bg-danger" @onclick="Close">
+﻿<div class="custom-toast @background" @onclick="Close">
     <div style="display:flex; flex-direction: column; justify-content: center; padding: 0 1rem; font-size:2.5rem;">
-        <i class="bi-x-circle"></i>
+        <i class="@icon"></i>
     </div>
     <div style="display:flex; flex-direction:column; flex:1; padding-left:1rem;">
-        <h5>Error</h5>
+        <h5>@title</h5>
         <p style="margin-bottom:0;">@Message</p>
     </div>
 </div>

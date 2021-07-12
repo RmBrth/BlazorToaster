@@ -7,14 +7,25 @@
 Welcome to your new app.
 
 <div>
-    <button class="btn btn-danger" @onclick="ToastInfoClick">
-        <span><i class="bi-alarm" /> Toast popup</span>
+    <button class="btn btn-info" @onclick="@(() => ToastService.ShowToast("This is a toast for informative message.", ToastLevel.Info))">
+        <span><i class="bi-alarm" /> Toast info</span>
     </button>
 </div>
-
-@code {
-    void ToastInfoClick()
-    {
-        ToastService.ShowToast("This is a toast message");
-    }
-}
+<br />
+<div>
+    <button class="btn btn-success" @onclick="@(() => ToastService.ShowToast("This is a toast for success message.", ToastLevel.Success))">
+        <span><i class="bi-alarm" /> Toast success</span>
+    </button>
+</div>
+<br />
+<div>
+    <button class="btn btn-warning" @onclick="@(() => ToastService.ShowToast("This is a toast for warning message.", ToastLevel.Warning))">
+        <span><i class="bi-alarm" /> Toast warning</span>
+    </button>
+</div>
+<br />
+<div>
+    <button class="btn btn-danger" @onclick="@(() => ToastService.ShowToast("This is a toast for error message.", ToastLevel.Error))">
+        <span><i class="bi-alarm" /> Toast error</span>
+    </button>
+</div>

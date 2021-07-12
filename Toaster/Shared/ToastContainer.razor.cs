@@ -30,13 +30,14 @@ namespace Toaster.Shared
             });
         }
 
-        private void ShowToast(string message)
+        private void ShowToast(string message, ToastLevel level)
         {
             var toast = new Toast()
             {
                 // TODO: Fix warning BL0005
                 Id = Guid.NewGuid(),
-                Message = message
+                Message = message,
+                Level = level
             };
             toasts.Add(toast);
             StateHasChanged();

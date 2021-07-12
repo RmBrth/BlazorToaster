@@ -3,7 +3,7 @@
     display: flex;
     position: relative;
     flex-direction: row;
-    animation: fadein 1.5s;
+    animation: fadein 1s;
     margin-bottom: 1rem;
     padding: 1rem 1.25rem;
     color: #fff;
@@ -16,8 +16,16 @@
     from {
         opacity: 0;
     }
-
     to {
         opacity: 1;
+    }
+}
+
+@keyframes fadeout {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
     }
 }

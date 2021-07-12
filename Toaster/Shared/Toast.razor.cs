@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Components;
 using System;
+using System.Timers;
 using Toaster.Services;
 
 namespace Toaster.Shared
@@ -15,8 +16,13 @@ namespace Toaster.Shared
         private string icon;
         private string title;
 
+        private readonly Timer timer = new(5000);
+
         protected override void OnInitialized()
         {
+            timer.Elapsed += (e, args) => { Close(); };
+            timer.Start();
+
             switch (Level)
             {
                 case ToastLevel.Info:

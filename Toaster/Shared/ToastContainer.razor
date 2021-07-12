@@ -4,8 +4,8 @@
         <CascadingValue Value="this">
             @foreach (var toast in toasts)
             {
-                // Not sure it's the best way to do
-                RenderFragment renderFragment = (builder) =>
+                // 1st attempt
+                @*RenderFragment renderFragment = (builder) =>
                 {
                     builder.OpenComponent(0, toast.GetType());
                     builder.AddAttribute(1, "Id", toast.Id);
@@ -14,10 +14,12 @@
                     builder.SetKey(toast);
                     builder.CloseComponent();
                 };
-                @renderFragment
+                @renderFragment*@
 
-                // Working too, better?
-                //<Toast @key="toast" Id="@toast.Id" Message="@toast.Message" Level="@toast.Level" />
+                // This way is sightly better. I guess a new fragment is not rendered at each StateHasChanged because of the @key directive.
+                <Toast @key="toast" Id="@toast.Id" Message="@toast.Message" Level="@toast.Level" />
+
+                // What the point of loading a List<Component> if you have to create a new component and bind properties?
             }
         </CascadingValue>
     </div>

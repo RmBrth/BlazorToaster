@@ -6,26 +6,25 @@
 
 Welcome to your new app.
 
-<div>
-    <button class="btn btn-info" @onclick="@(() => ToastService.ShowToast("This is a toast for informative message.", ToastLevel.Info))">
-        <span><i class="bi-alarm" /> Toast info</span>
-    </button>
+<style>
+    button {
+        margin-bottom: 1rem;
+    }
+</style>
+<div class="w-25">
+    <div style="display:flex; flex-direction:column">
+        <button class="btn btn-info" @onclick="@(() => ToastService.ShowToast("This is a toast for informative message but it has to be super long. I need to test the default behavior and somethings like text wrapping or text truncate", ToastLevel.Info))">
+            <span><i class="bi-alarm" /> Toast info</span>
+        </button>
+        <button class="btn btn-success" @onclick="@(() => ToastService.ShowToast("This is a toast for success message.", ToastLevel.Success))">
+            <span><i class="bi-alarm" /> Toast success</span>
+        </button>
+        <button class="btn btn-warning" @onclick="@(() => ToastService.ShowToast("This is a toast for warning message.", ToastLevel.Warning))">
+            <span><i class="bi-alarm" /> Toast warning</span>
+        </button>
+        <button class="btn btn-danger" @onclick="@(() => ToastService.ShowToast("This is a toast for error message.", ToastLevel.Error))">
+            <span><i class="bi-alarm" /> Toast error</span>
+        </button>
+    </div>
 </div>
-<br />
-<div>
-    <button class="btn btn-success" @onclick="@(() => ToastService.ShowToast("This is a toast for success message.", ToastLevel.Success))">
-        <span><i class="bi-alarm" /> Toast success</span>
-    </button>
-</div>
-<br />
-<div>
-    <button class="btn btn-warning" @onclick="@(() => ToastService.ShowToast("This is a toast for warning message.", ToastLevel.Warning))">
-        <span><i class="bi-alarm" /> Toast warning</span>
-    </button>
-</div>
-<br />
-<div>
-    <button class="btn btn-danger" @onclick="@(() => ToastService.ShowToast("This is a toast for error message.", ToastLevel.Error))">
-        <span><i class="bi-alarm" /> Toast error</span>
-    </button>
-</div>
+

@@ -48,6 +48,11 @@ namespace Toaster.Shared
             }
         }
 
+        public void Pause()
+        {
+            timer.Stop();
+        }
+
         public void Close()
         {
             Container.RemoveToast(Id);

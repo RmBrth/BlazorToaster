@@ -1,8 +1,7 @@
 ﻿
-.custom-toast-container {
+.custom-toast {
     display: flex;
-    position: absolute;
-    z-index:100;
+    position: relative;
     flex-direction: row;
     animation: fadein 1.5s;
     margin-bottom: 1rem;
@@ -10,8 +9,6 @@
     color: #fff;
     width: 50vw;
     border-radius:1rem;
-    top:2rem;
-    left:25vw;
     box-shadow: rgba(0,0,0,0.25) 0px 10px 40px;
 }
 

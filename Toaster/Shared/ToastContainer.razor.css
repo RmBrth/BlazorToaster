@@ -1,0 +1,8 @@
+﻿.custom-toast-container {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    z-index: 100;
+    top: 2rem;
+    left: 25vw;
+}

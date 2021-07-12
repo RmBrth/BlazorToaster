@@ -1,0 +1,19 @@
+﻿@if (toasts.Any())
+{
+    <div class="custom-toast-container">
+        <CascadingValue Value="this">
+            @foreach (var toast in toasts)
+            {
+                // Not sure it's the best way to do
+                RenderFragment renderFragment = (builder) =>
+                {
+                    builder.OpenComponent(0, toast.GetType());
+                    builder.AddAttribute(1, "Id", toast.Id);
+                    builder.AddAttribute(2, "Message", toast.Message);
+                    builder.CloseComponent();
+                };
+                @renderFragment
+            }
+        </CascadingValue>
+    </div>
+}
